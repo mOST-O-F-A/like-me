@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body {
+    background: gray;
+    margin: 0;
+    padding: 0;
+    font-family: "Oswald", sans-serif;
+}
+
+/* NAVBAR */
+nav ul {
+    background: linear-gradient(rgb(16, 16, 60), rgb(104, 9, 9));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* better than space-evenly on mobile */
+    margin: 0;
+    padding: 20px;
+    gap: 20px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: blueviolet;
+    display: inline-block; /* needed for transform */
+}
+
+nav ul li a:hover {
+    text-decoration: underline rgb(0, 255, 221);
+    color: rgba(233, 240, 31, 0.8);
+    transition: 0.3s;
+    transform: translateX(5px); /* reduced for mobile */
+}
+
+/* SECTION ONE */
+.sec-one {
+    margin: 2%;
+    padding: 15px;
+    color: rgba(5, 15, 16, 0.651);
+    font-weight: 900;
+    background: radial-gradient(rgb(143, 58, 58), rgb(173, 99, 99));
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.sec-one img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    flex: 1 1 300px;
+}
+
+.sec-one > * {
+    flex: 1 1 300px;
+}
+
+/* SECTION THREE */
+.sec-three {
+    margin: 20px;
+    padding: 20px;
+    color: black;
+    font-weight: 900;
+    background: linear-gradient(35deg, rgb(95, 72, 128), rgb(119, 119, 58));
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* SECTION FOUR */
+.sec-four {
+    margin: 20px;
+    padding: 20px;
+    color: rgb(71, 87, 86);
+    font-weight: 900;
+    background: linear-gradient(30deg, rgb(91, 50, 50), rgb(21, 35, 63));
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+@media(max-width:768px) {
+    nav ul li {
+        flex-direction: column;
+        align-items: center;
+        padding: 18px;
+    }
+    .sec-one,
+    .sec-three,
+    .sec-four {
+
+        flex-direction: column;
+
+    }
+
+    .sec-one{
+        text-align: center;
+    }
+
+    nav ul li a:hover{
+        transform: none;
+    }
+
+}
